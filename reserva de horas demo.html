@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+    integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+    <title>Vista Centro medico Galeanos</title>
+</head>
+<body>
+
+    <section class="content-header">
+        <h1 align="center" style="color: rgb(0, 162, 255);">RESERVA DE HORAS</h1>
+    </section>
+    <section class="content">
+        <div class="box-header">
+            <h3 align="center" class="box-title" style="color: rgb(0, 162, 255);" >DATOS DEL PACIENTE</h3>
+        </div>
+        <div class="row">
+            <!--left column -->
+            <div class="col-md-6">
+                <div class="box box-primary">
+                    <div class="box-body">
+                        <div class="form-group">
+                            <label>DOCUMENTO DE IDENTIDAD</label>
+                        </div>
+                        <div class="input-group">
+                            <asp:TextBox ID="txtDNI" CssClass="form-control" runat="server"></asp:TextBox>
+                            <div class="input-group-btn">
+                                <asp:Button ID="btnBuscar" runat="server" CssClass="btn btn-danger" Text="BUSCAR" />
+                            </div>
+                        </div>
+                        <br />
+                        <div class="form-group">
+                            <label>NOMBRES</label>
+                            <input type="text" class="form-control is-valid" id="inputNombre" 
+                              aria-describedby="textoNombre" placeholder="Nombre" required width="80%">
+                        </div>
+                        <div class="form-group">
+                            <label>APELLIDOS</label>
+                            <input type="text" class="form-control is-valid" id="inputApellido" 
+                              aria-describedby="textoApellido" placeholder="Apellido" required width="80%">
+                        </div>
+                   
+                    <!-- </form> -->
+                
+           
+            <!--rigth column -->
+            <div class="col-md-6">
+                <div class="box box-primary">
+                    <br />
+                    <div class="box-body">
+                        <div class="form-group">
+                            <label>TELÉFONO</label>
+                            <input type="text" class="form-control is-valid" id="inputTelefono" 
+                              aria-describedby="textoTelefono" placeholder="" required width="80%">
+                        </div>
+                        <div class="form-group">
+                            <label>EDAD</label>
+                            <input type="text" class="form-control is-valid" id="inputEdad" 
+                              aria-describedby="textoEdad" placeholder="" required width="80%">
+                        </div>
+                        <div class="form-group">
+                            <label>SEXO</label>
+                            <input type="text" class="form-control is-valid" id="inputSexo" 
+                              aria-describedby="textoSexo" placeholder="" required width="80%">
+                        </div>
+                        <div class="form-group">
+                            <label>CORREO ELECTRONICO</label>
+                            <input type="text" class="form-control is-valid" id="inputCorreoElectronico" 
+                              aria-describedby="textoCorreoElectronico" placeholder="" required width="80%">
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <section class="content-header">
+            <h3  style="color: rgb(0, 162, 255);">HORARIOS DE ATENCIÓN</h3>
+           <select class="Ch2LG has-custom-focus _1UP8Q" id="collection_comp-ju8grd9b" required=""><option selected="" value="Horario atencion" disabled="" class="Vx877 _3pa83"> Horario atencion</option><option value="Chevrolet" class="Vx877">12:00</option><option value="Ford" class="Vx877">12:30</option><option value="Otro (indique en comentarios)" class="Vx877">13:30</option>
+                <option value="14:30" class="Vx877">14:30</option><option value="15:00" class="Vx877">15:00</option><option value="15:30" class="Vx877">15:30</option><option value="16:00" class="Vx877">16:00</option><option value="16:30" class="Vx877">16:30</option><option value="17:30" class="Vx877">17:30</option></select>
+        </section>
+        <!--SELECCIONAR HORARIO DE ATENCION -->
+        <div class="row">
+            <!--left column -->
+            <div class="col-md-6">
+                <div class="box box-primary">
+                    <!-- <form role="form"> -->
+                    <div class="box-body">
+                        <!-- INICIO CALENDARIO -->
+                        <div class="form-group">
+                            <label>FECHA</label>
+                            <div class="input-group">
+                                <select class="Ch2LG has-custom-focus _1UP8Q" id="collection_comp-ju8grd9b" required=""><option selected="" value="Horario atencion" disabled="" class="Vx877 _3pa83"> Fechas disponibles</option><option value="Jueves 24 de noviembre 2022" class="Vx877">Jueves 24 de noviembre 2022</option><option value="Viernes 25 de noviembre 2022" class="Vx877">Viernes 25 de noviembre 2022</option><option value="Sabado 26 de noviembre de 2022" class="Vx877">Sabado 26 de noviembre de 2022</option>
+                                    <option value="Lunes 28 de noviembre 2022" class="Vx877">Lunes 28 de noviembre 2022</option></select>
+                                </div>
+                                <asp:TextBox ID="txtFechaAtencion" runat="server" CssClass="form-control" data-inputmask="'alias': 'dd/mm/yyyy'" data-mask=""></asp:TextBox>
+                            </div>
+                            <!-- /.input group -->
+                        </div>
+                        <!-- /.form group -->
+                        <!-- FIN CALENDARIO-->
+                    </div>
+                    <!-- </form> -->
+                </div>
+            </div>
+            <!--rigth column -->
+            <div class="col-md-4">
+                <div class="box box-primary">
+                    <div class="box-body">
+                        <!-- <form role="form"> -->
+                        <div class="form-group">
+                            <label>ESPECIALIDAD</label>
+                            <select class="Ch2LG has-custom-focus _1UP8Q" id="collection_comp-ju8grd9b" required=""><option selected="" value="Horario atencion" disabled="" class="Vx877 _3pa83"> Especialidad</option><option value="Cardiologia clinica" class="Vx877">Cardiologia clinica</option><option value="Kinesiologia" class="Vx877">Kinesiologia</option><option value="Pediatria" class="Vx877">Pediatria</option>
+                                <option value="Traumatologia" class="Vx877">Traumatologia</option></select>
+                        </div>
+                        <!-- </form> -->
+
+                        <div class="input-field">
+                            <button class="sumbit">
+                                <a href="formularioSucess.html" span class="btnText">Reservar</span>
+                                <i class="uil uil-navigator"></i>
+                            </button>   
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-2">
+                <div class="box box-primary">
+                    <div class="box-body">
+                        <!-- <form role="form"> -->
+                        <div class="input-group-">
+                            <asp:Button ID="btnBuscarHorario" runat="server" CssClass="btn btn-danger" Text="Buscar" />
+                            <br />
+                            <br />
+                            <br />
+                        </div>
+                    </div>
+                    <!-- </form> -->
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+
+
+
+
+
+
+
+</body>
+
+
+    
+    
+    
+    
+    
+<script src="script.js"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+</body>
+</html>
